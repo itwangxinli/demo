@@ -1,0 +1,26 @@
+@(profiles: List[org.pac4j.core.profile.CommonProfile], csrfToken: String, sessionId: String)
+<h1>index</h1>
+<a href="form/index.html">Protected url by form authentication : form/index.html</a> (use login = pwd)<br />
+<a href="javascript:ajaxClick();">Click here to send AJAX request after performing form authentication</a><br />
+<a href="protected/index.html">Protected url: protected/index.html</a> (won't start any login process)<br />
+<a href="protected/custom.html">Protected url: protected/custom.html</a> (won't start any login process, but requires a jle* username)<br />
+<br />
+
+<a href="/logout">local logout</a><br />
+<br/>
+<br /><br />
+profiles: @profiles<br />
+<br />
+    sessionId: @sessionId
+<br /><br />
+<br />
+<br />
+<h2>Find the source code on <a target="_blank" href="https://github.com/pac4j/play-pac4j-scala-demo">https://github.com/pac4j/play-pac4j-scala-demo</a><br/>
+    <br />
+    See it running on Heroku: <a target="_blank" href="http://play-pac4j-scala-demo.herokuapp.com">http://play-pac4j-scala-demo.herokuapp.com</a></h2>
+
+    <!-- Link to Google CDN's jQuery; fall back to local -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery.min.js"><\/script>')</script>
+
+<script src="assets/js/app.js"></script>
