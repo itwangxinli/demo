@@ -38,7 +38,7 @@ class SecurityModule(environment: Environment, configuration: Configuration) ext
 
     // logout
     val logoutController = new LogoutController()
-    logoutController.setDefaultUrl("/")
+    logoutController.setDefaultUrl("/home")
     bind(classOf[LogoutController]).toInstance(logoutController)
   }
 
