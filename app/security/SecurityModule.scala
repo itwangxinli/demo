@@ -44,7 +44,7 @@ class SecurityModule(environment: Environment, configuration: Configuration) ext
 
 
   @Provides
-  def provideFormClient: FormClient = new FormClient(baseUrl + "/loginForm", new SimpleTestUsernamePasswordAuthenticator())
+  def provideFormClient: FormClient = new FormClient(baseUrl + "/loginForm", new UsernamePasswordAuthenticator())
 
 
   @Provides
